@@ -85,12 +85,15 @@
       var a = 2;
       var b = 2.0;
 
+    // boolean
       var c = true;
       var d = false;
     //Talk about data types
+    // string
       var x = 'Bacon';
       var y = "Bacon1";
     //How does one use if/else/elseif
+    // array
       var z = [1, true, 'hammer'];
       var obj = {firstName: 'Justin', lastName: 'Dennison'};
       var objAlso = {'firstName': 'Justin', 'lastName': 'Dennison'};
@@ -102,7 +105,7 @@
       z[2] = 'crowbar';
       console.log(z);
       console.log(obj.firstName);
-      console.log(objAlso["AlsofirstName"]);
+      console.log(objAlso["firstName"]);
       obj.firstName = "MC";
       console.log(obj.firstName);
     //Arrays
@@ -113,16 +116,29 @@
     // Assignment: Create a variable for each of the following data types-
     //             A. number
                       var aNumber = 1;
-                      console.log('aNumber:' +aNumber);
+                      console.log(aNumber);
+    //
     //             B. string
-                      var
+                      var aString = 'string';
+                      console.log("string");
+
     //             C. boolean
+                      var cBoolean = true;
+                      var dBoolean = false;
+                      console.log(c&&d); false
+
     //             D. array
     //                 i. Create an array with three numbers in it.
+                      var anArray = [ 3, 4, 5];
+                      console.log(anArray);
+                      console.log(anArray[0]);
+
     //             E. object
     //                 i. You must have two properties name and age
     //                 ii. You can set those properties to values of any type, but you must have a value
-    //
+                      var obj = {myName: 'andranique', myLastName: 'boone', myAge: '30'}
+                      console.log(obj.myName, obj.myLastName, obj.myAge);
+
     //     A. Using the number and MDN documentation/others that you can console.log the results of various math operations: *, /, +, -, square root, floor, ceil, and a random number between 0 and 1.
     //     B. Using the string variable console.log each of the following:
     //             - Add the word "Hey" to the end of your string variable
