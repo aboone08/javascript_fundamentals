@@ -70,6 +70,10 @@
 
         <div id="first" class="row">
             <form>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input for="name" class="form-control" id="name" placeholder="Name">
+              </div>
                 <div class="form-group">
                     <label for="email">Email address</label>
                     <input type="email" class="form-control" id="email" placeholder="Email">
@@ -78,7 +82,7 @@
                     <label for="password">Password</label>
                     <input type="password" class="form-control" id="password" placeholder="Password">
                 </div>
-                <button class="btn btn-primary">Submit</button>
+                <button type="button" class= 'btn btn-primary'>Submit</button>
             </form>
 
         </div>
@@ -86,11 +90,14 @@
         <hr>
         <h3>Output</h3>
         <div id="second" class="row">
+            <h4 id="name-label">Name:</h4>
+            <p id="name-output"></p>
             <h4 id="email-label">Email Address:</h4>
             <p id="email-output"></p>
             <br>
             <h4 id = "password-label">Password:</h4>
-            
+            <p id="password-output"></p>
+
         </div>
         <!-- /#second -->
     </div>
@@ -105,13 +112,33 @@
         //Lets change some content and a little styles
 
         //Let's get ahold of all of these elements
-
+        var emailInput = document.getElementById('email');
+        var passwordInput = document.getElementById('password');
+        var button = document.querySelector('button.btn.btn-primary');
+        var emailOutput = document.querySelector('#email-output');
+        var passwordOutput = document.querySelector('#password-output');
+        var nameInput = document.getElementById('name');
+        var nameOutput = document.querySelector('#name-output');
         //Let's write a handling function for the button click
-            //use the elements from the form and get their values
-            //apply that value as the innerText for the output respective output portions
-            //add a little styling
-        //Let's attach an eventListener to the button for the click event
+        function clickHandler(){
+          //use the elements from the form and get their values
+          var emailValue = emailInput.value;
+          var passwordValue = passwordInput.value;
+          var nameValue = nameInput.value;
+          //apply that value as the innerText for the respective output portions
+        emailOutput.innerText = emailValue;
+        passwordOutput.innerText = passwordValue;
+        nameOutput.innerText = nameValue;
+          //add a little styling
+          emailOutput.style.backgroundColor = 'chartreuse';
+          passwordOutput.style.backgroundColor = 'bisque';
+          nameOutput.style.backgroundColor = 'black';
+          nameOutput.style.color = 'red';
 
+        }
+
+        //Let's attach an eventListener to the button for the click event
+        button.addEventListener('click', clickHandler);
 /*
         Assignment:
             - Add another form input of your choice... Maybe age or name?
