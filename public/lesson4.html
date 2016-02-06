@@ -76,7 +76,9 @@
          <div id="second" class="row">
            <button id="myButton" class= "btn btn-default">Click Here!</button>
          </div>
-
+         <br>
+           <input id='name-input' class="form-control" placeholder="Name">
+         </div>
     </div>
     <!-- /.container -->
 
@@ -112,12 +114,16 @@
                  var myButton = document.getElementById('myButton');
                  myButton.addEventListener('click', nameInput);
 
-                 function nameInput(myButton){
-                   var name = prompt('What is your name?');
-                 console.log('My name is ');
+                 function nameInput(){
+                  var name = prompt('What is your name?');
+                 console.log('My name is ' + name );
                }
               // CHALLENGE: Create an input field with the id of name-input. Create and add a focus listener to that input field that alerts the user they have "focused" or clicked inside the input box.
 //                myButton.addEventListener('click',(myButton));
+
+                  $("name-input").focus(function(click){
+                    $(this).css("background-color", "#ccccc");
+                  });
 
     </script>
 </body>
